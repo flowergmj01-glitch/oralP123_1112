@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日語口說測驗（A2～B2 精華版）全真猜題｜台灣企業行政職篇</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #eef2ff 0%, #fdf2f8 50%, #f0fdf4 100%);
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .level-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: white;
+            margin-right: 0.5rem;
+            letter-spacing: 0.04em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+            white-space: nowrap;
+        }
+        .badge-a2 { background: linear-gradient(135deg, #3b82f6, #6366f1); }       /* Blue-Indigo */
+        .badge-a2-high { background: linear-gradient(135deg, #06b6d4, #0d9488); }  /* Cyan-Teal */
+        .badge-b1 { background: linear-gradient(135deg, #10b981, #059669); }       /* Emerald-Green */
+        .badge-b1-high { background: linear-gradient(135deg, #f59e0b, #ea580c); }  /* Amber-Orange */
+        .badge-b2 { background: linear-gradient(135deg, #f43f5e, #db2777); }       /* Rose-Pink */
+
+        ruby rt {
+            font-size: 0.68em;
+            color: #d946ef;
+            font-weight: 700;
+        }
+        .pause-mark {
+            color: #f43f5e;
+            font-weight: 900;
+            margin: 0 0.25rem;
+        }
+        .filter-btn.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+            outline: 3px solid #ffffff;
+        }
+    </style>
+</head>
+<body class="p-3 md:p-8">
+
+    <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border-2 border-white">
+        
+        <!-- 繽紛彩色頂部橫幅 -->
+        <header class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <span class="bg-white/20 backdrop-blur-sm text-white text-xs md:text-sm font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider border border-white/40 shadow-sm">
+                    ✨ CEFR A2 ～ B2 實戰精華版（已濾除 A1 初階單字句）
+                </span>
+                <h1 class="text-2xl md:text-4xl font-black mt-4 mb-3 drop-shadow">
+                    商用日語口說測驗 全真猜題大全
+                </h1>
+                <p class="text-pink-100 text-sm md:text-base font-medium bg-black/15 inline-block px-4 py-2 rounded-xl border border-white/20">
+                    💼 統一應試人設：<strong class="text-yellow-300">台灣企業行政人員（事務職）</strong>｜核心業務：收集部門數據、整理 Excel 資料、製作並向主管提交報告
+                </p>
+                
+                <!-- 彩色錨點導覽按鈕 -->
+                <div class="flex flex-wrap justify-center gap-3 mt-6">
+                    <a href="#part1" class="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-extrabold py-2.5 px-5 rounded-xl shadow-lg text-sm transition transform hover:-translate-y-0.5">
+                        🎙️ Part 1：インタビュー（10 問）
+                    </a>
+                    <a href="#part2" class="bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-300 hover:to-teal-400 text-white font-extrabold py-2.5 px-5 rounded-xl shadow-lg text-sm transition transform hover:-translate-y-0.5">
+                        📖 Part 2：音読（商用朗讀 8 問）
+                    </a>
+                    <a href="#part3" class="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-white font-extrabold py-2.5 px-5 rounded-xl shadow-lg text-sm transition transform hover:-translate-y-0.5">
+                        ⏱️ Part 3：スピーチ（1分鐘演講）
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 互動式彩色等級篩選器 (Sticky Bar) -->
+        <div class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b-2 border-purple-100 px-4 py-3 shadow-md">
+            <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-2">
+                <span class="text-xs md:text-sm font-extrabold text-purple-900 flex items-center gap-1">
+                    🎨 點擊切換欲練習的等級：
+                </span>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterLevel('all', this)" class="filter-btn active text-xs font-extrabold px-3.5 py-1.5 rounded-full bg-slate-800 text-white transition">
+                        🌈 全部顯示 (A2~B2)
+                    </button>
+                    <button onclick="filterLevel('lv-a2', this)" class="filter-btn text-xs font-extrabold px-3.5 py-1.5 rounded-full badge-a2 transition">
+                        A2 基礎完整句
+                    </button>
+                    <button onclick="filterLevel('lv-a2-high', this)" class="filter-btn text-xs font-extrabold px-3.5 py-1.5 rounded-full badge-a2-high transition">
+                        A2 High 合作與匯報
+                    </button>
+                    <button onclick="filterLevel('lv-b1', this)" class="filter-btn text-xs font-extrabold px-3.5 py-1.5 rounded-full badge-b1 transition">
+                        B1 雙實例舉證
+                    </button>
+                    <button onclick="filterLevel('lv-b1-high', this)" class="filter-btn text-xs font-extrabold px-3.5 py-1.5 rounded-full badge-b1-high transition">
+                        B1 High 讀者視角
+                    </button>
+                    <button onclick="filterLevel('lv-b2', this)" class="filter-btn text-xs font-extrabold px-3.5 py-1.5 rounded-full badge-b2 transition">
+                        B2 經營決策雙實例
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 md:p-10">
+
+            <!-- 彩色測驗策略卡片 -->
+            <section class="mb-10 grid md:grid-cols-3 gap-4">
+                <div class="bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-5 rounded-2xl shadow-lg">
+                    <div class="text-xs font-bold uppercase tracking-wider text-blue-200 mb-1">Strategy 01</div>
+                    <strong class="text-lg block mb-2">🎙️ Part 1（無文字・20秒）</strong>
+                    <p class="text-xs md:text-sm text-blue-50 leading-relaxed">
+                        抓到關鍵字（仕事、忙しい、やりがい、ミス、AI、外国人），立刻套用<strong>「收集部門數據 → 整理 Excel → 製作並提交報告給主管」</strong>的黃金公式！
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-emerald-500 to-teal-600 text-white p-5 rounded-2xl shadow-lg">
+                    <div class="text-xs font-bold uppercase tracking-wider text-emerald-200 mb-1">Strategy 02</div>
+                    <strong class="text-lg block mb-2">📖 Part 2（有文字・10秒）</strong>
+                    <p class="text-xs md:text-sm text-emerald-50 leading-relaxed">
+                        無準備時間！熟記下方 8 句高頻商務漢字讀音（<strong>ご査収、添付、集計、進捗、上半期</strong>），並在粉紅斜線 <strong>／</strong> 處自然換氣。
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-500 to-pink-500 text-white p-5 rounded-2xl shadow-lg">
+                    <div class="text-xs font-bold uppercase tracking-wider text-amber-100 mb-1">Strategy 03</div>
+                    <strong class="text-lg block mb-2">⏱️ Part 3（準備40秒・講60秒）</strong>
+                    <p class="text-xs md:text-sm text-amber-50 leading-relaxed">
+                        必講滿 3 個指定要點！連「休假想做的事」都能用<strong>「因為平日整理資料做報告眼睛很累，所以想去泡溫泉／露營」</strong>完美串聯！
+                    </p>
+                </div>
+            </section>
+
+            <!-- ================================================================= -->
+            <!-- PART 1: インタビュー (10 Questions, A2 ~ B2 Only) -->
+            <!-- ================================================================= -->
+            <section id="part1" class="mb-14 scroll-mt-16">
+                <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white p-5 rounded-t-2xl flex flex-wrap justify-between items-center gap-2 shadow-md">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-cyan-300 block">Part 1：Interview (A2 ～ B2)</span>
+                        <h2 class="text-2xl font-black">🎙️ インタビュー（短答問題・全 10 問預測）</h2>
+                    </div>
+                    <div class="text-xs bg-white/20 backdrop-blur-sm px-3.5 py-2 rounded-xl font-bold text-white border border-white/30">
+                        問題数：10問 ｜ 準備：なし ｜ 回答：各20秒 ｜ テキスト：なし
+                    </div>
+                </div>
+                <div class="bg-indigo-50/90 p-4 text-xs md:text-sm text-indigo-950 border-x-2 border-b-2 border-indigo-200 rounded-b-2xl mb-6 jp-text">
+                    <strong>【官方指示】</strong> 音声による短い質問に答えます。テキストはありません。音声をよく聞きましょう。問題が全部わからなかったら、わかった部分について何か話しましょう。
+                </div>
+
+                <!-- 彩色問題快速跳轉 -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <a href="#p1-q1" class="text-xs bg-gradient-to-r from-blue-50 to-indigo-50 border border-indigo-300 hover:bg-indigo-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-indigo-800 transition shadow-sm">Q1. 工作是什麼</a>
+                    <a href="#p1-q2" class="text-xs bg-gradient-to-r from-blue-50 to-indigo-50 border border-indigo-300 hover:bg-indigo-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-indigo-800 transition shadow-sm">Q2. 每日具體作業</a>
+                    <a href="#p1-q3" class="text-xs bg-gradient-to-r from-blue-50 to-indigo-50 border border-indigo-300 hover:bg-indigo-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-indigo-800 transition shadow-sm">Q3. 最忙碌的時期</a>
+                    <a href="#p1-q4" class="text-xs bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-300 hover:bg-emerald-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-emerald-800 transition shadow-sm">Q4. 工作成就感</a>
+                    <a href="#p1-q5" class="text-xs bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 hover:bg-amber-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-amber-800 transition shadow-sm">Q5. 工作最重視的事</a>
+                    <a href="#p1-q6" class="text-xs bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 hover:bg-amber-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-amber-800 transition shadow-sm">Q6. 錯誤與突發應對</a>
+                    <a href="#p1-q7" class="text-xs bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 hover:bg-amber-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-amber-800 transition shadow-sm">Q7. 團隊或獨立作業</a>
+                    <a href="#p1-q8" class="text-xs bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-300 hover:bg-rose-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-rose-800 transition shadow-sm">Q8. 未來想學的技能</a>
+                    <a href="#p1-q9" class="text-xs bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-300 hover:bg-rose-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-rose-800 transition shadow-sm">Q9. AI與數位化看法</a>
+                    <a href="#p1-q10" class="text-xs bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-300 hover:bg-rose-600 hover:text-white px-3.5 py-1.5 rounded-full font-bold text-rose-800 transition shadow-sm">Q10. 外籍與多元人才</a>
+                </div>
+
+                <!-- ================= Q1 ================= -->
+                <div id="p1-q1" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-indigo-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-400 text-indigo-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q1 必考基礎題</span>
+                            <span class="jp-text">あなたの仕事は何ですか？</span>（你的工作是什麼？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：仕事（しごと）／ 何（なに）</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <span class="text-xs text-blue-800 font-bold">基礎完整句・用「でも」表達正面態度</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「私の仕事は台湾の会社の事務アシスタントです。会社にはたくさんの営業スタッフがいます。私の仕事はデータの整理と、レポート作成のサポートです。仕事は大変、でも、本当に楽しいです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我的工作是台灣公司的行政助理。公司有很多業務，我的工作是整理資料與支援做報告。工作很辛苦，但真的很開心。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <span class="text-xs text-teal-800 font-bold">具體描述跨部門合作與一對一匯報</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「私は台湾の企業で事務スタッフとして働いています。私たちのチームは、営業部や経理部の担当者と協力しています。私はデータを整理して、毎週マネージャーと1対1でレポートの報告をします。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我在台灣企業擔任行政人員。我們團隊與業務部及財務部合作，我負責整理資料，每週與經理一對一進行報告。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：台日貿易行政）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「現在、台湾の貿易会社で営業事務およびデータ管理に関わる仕事をしています。例えば、毎月の売上や在庫のデータを整理して分析レポートを作成し、上司や日系企業の取引先に業務改善の報告や提案を行っています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（目前在台灣貿易公司從事營業行政與數據管理工作。例如整理每月銷售與庫存數據、製作分析報告，向主管或日商客戶匯報與提案。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：科技業專案行政）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私は台湾のIT企業でプロジェクト管理の事務を担当しています。具体的には、開発部や営業部から毎週集めた進捗データや予算の数字をエクセルで集計し、経営陣に提出する週次報告書を作成しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我在台灣IT企業負責專案管理行政。具體而言，用Excel彙整研發與業務部每週收集來的進度與預算數據，製作提交給經營層的週報。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <span class="text-xs text-amber-900 font-bold">強調閱讀者視角與團隊檢視流程</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「台湾企業の管理部門で、全社のデータ集計および経営報告書の作成を担当しています。ただ数字をまとめるだけでなく、報告書を読む上司の立場から見て、一目で課題が分かるグラフや資料を作成し、チームでレビューを行った上で提出しています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（在台灣企業管理部門負責全公司數據彙整與經營報告製作。不只整理數字，還站在閱讀報告的主管立場，製作能一目了然看出問題的圖表，並在團隊審查後提交。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：支援經營決策視角）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私は台湾企業のアドミニストレーターとして、各部署の業績データの統合および経営層向けの分析レポート作成を担っております。単なる定型的な事務処理にとどまらず、集約したデータから業務上のボトルネックを可視化し、迅速な意思決定を支える役割を果たしています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我身為台灣企業的行政管理人員，負責整合各部門業績數據並製作給經營層的分析報告。不僅止於例行庶務，更透過彙整的數據將業務瓶頸視覺化，扮演支援迅速決策的角色。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：跨部門資訊樞紐視角）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「台湾のメーカーにて、社内のあらゆる情報を集約・分析し、経営会議用の報告書として取りまとめる業務に従事しております。部署間の情報の非対称性を解消し、全社的な生産性向上に貢献することが私の主なミッションです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（在台灣製造商從事彙整並分析公司內部各項資訊、統整為經營會議用報告書的業務。消除部門間的資訊不對稱，並對全公司的生產力提升做出貢獻是我的主要使命。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q2 ================= -->
+                <div id="p1-q2" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-indigo-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-400 text-indigo-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q2 日常工作細節</span>
+                            <span class="jp-text">毎日、会社で主にどんな作業をしていますか？</span>（每天在公司主要做哪些作業？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：毎日（まいにち）／ どんな作業（さぎょう）</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「午前中はメールをチェックして、各部署のデータを集めます。午後はエクセルでデータを整理して、会議の報告書を作ります。毎日忙しいですが、やりがいがあります。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（上午檢查郵件並收集各部門資料。下午用Excel整理資料、製作會議報告。每天雖然忙但很有價值。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「毎日、営業スタッフから送られてくる売上データをエクセルに入力して整理しています。そして、数字に間違いがないか確認してから、課長に毎日の業務レポートを提出しています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（每天將業務人員寄來的銷售資料輸入Excel整理。接著確認數字無誤後，向課長提交每日業務報告。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：營業與出貨數據彙整）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「主な作業は、各部署から提出される日次の売上データや出荷データを整理することです。例えば、数字に漏れや計算ミスがないかをチェックし、グラフ付きの報告書にまとめてから、夕方の会議前に上司へ提出しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（主要作業是整理各部門提交的每日銷售與出貨資料。例如檢查數字有無遺漏或計算錯誤，整理成附圖表的報告後，在傍晚會議前交給主管。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：經費審查與月報準備）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「毎日のルーティンとして、社員が申請した経費データの確認と、月次報告書の準備を行っています。具体的には、領収書の金額とシステムの数字を照らし合わせて整理し、部門ごとの予算レポートを作成してマネージャーに報告しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（作為每日例行公事，我負責確認員工申請的經費資料並準備月報。具體來說，核對收據金額與系統數字並加以整理，製作各部門預算報告向經理匯報。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「日々、社内のデータベースから売上やコストの数値を抽出し、目的別のレポートを作成する作業を行っています。その際、報告書を読む上司がすぐ状況を理解できるよう、重要な変動があればコメントを添えて、チームでダブルチェックしてから提出しています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（每天從內部資料庫擷取營收與成本數值，製作不同目的的報告。此時為了讓閱讀報告的主管能立刻理解狀況，若有重要變動會附上備註，並與團隊雙重確認後再提交。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：數據異常監控與報告提交）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「日常業務としては、各部門から集まる膨大なオペレーションデータのクレンジング（整理）と、日次・週次報告書の作成を行っております。単に数値を集計するだけでなく、前月比で異常値が見られた場合は関連部署へヒアリングを行い、その背景分析も含めて経営陣へ報告しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（日常業務為清理並整理各部門匯集的龐大營運數據，並製作日報與週報。不僅是單純彙整數值，若與上月相比出現異常值，會向相關部門進行訪談，連同背景分析一併向經營層報告。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：跨部門報告流程控管）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「全社の進捗管理データを一元的に整理し、定例会議に向けた資料の作成および事前レビューを主導しております。各部署からの報告が遅れないようスケジュールを管理しつつ、経営判断に必要な指標を抽出して質の高いレポートを提出することが日課です。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（統一整理全公司的進度管理數據，主導例行會議的資料製作與事前審查。一邊控管時程避免各部門延遲繳交報告，一邊擷取經營決策所需的指標以提交高品質報告，是我的每日功課。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q3 ================= -->
+                <div id="p1-q3" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-indigo-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-400 text-indigo-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q3 工作節奏與原因</span>
+                            <span class="jp-text">仕事で一番忙しいのはいつですか？それはなぜですか？</span>（工作最忙是什麼時候？為什麼？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：一番忙しい ／ いつ ／ なぜ</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「毎月の月末が一番忙しいです。なぜなら、1ヶ月分のデータを全部整理して、大切な報告書を作らなければならないからです。でも、終わった後はすっきりします。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（每個月的月底最忙。因為必須把一個月份的資料全部整理好，製作重要的報告書。但結束後會覺得很暢快。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「月末から月初にかけて一番忙しいです。営業部や経理部と協力して1ヶ月の数字をまとめ、社長に提出する月次レポートを作成する必要があるからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（從月底到月初最忙。因為需要與業務部及財務部合作彙整一個月的數字，製作要提交給社長的月報。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：月底結算與月報提交）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「一番忙しいのは毎月の月末です。なぜかというと、各部署から1ヶ月分の売上データや経費データが一度に集まり、それを2日間ですべて整理して、経営会議用の月次報告書を提出しなければならないからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（最忙的是每個月底。因為各部門一個月份的營收與經費資料會同時湧入，必須在兩天內全部整理完畢，並提交經營會議用的月報。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：每週一早上的週報彙整）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「毎週月曜日の午前中が一番忙しいです。理由は、午後の全体会議に向けて、先週の営業データやプロジェクトの進捗を急いで集計し、マネージャーに最終確認のレポートを提出する必要があるからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（每週一上午最忙。理由是為了下午的全體會議，需要趕緊彙整上週的業務數據與專案進度，向經理提交最終確認的報告。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「四半期に一度の決算期が最も忙しいです。通常のデータ整理に加えて、過去3ヶ月分の実績と目標の比較レポートを作成する必要があるからです。限られた時間の中でもミスが出ないよう、チームで役割分担を議論し、優先順位をつけて対応しています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（每季一次的結算期最忙。因為除了平時的資料整理外，還需要製作過去三個月的實績與目標比較報告。為了在有限時間內不出錯，我們會與團隊討論分工並排定優先順序來應對。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：年度預算編列與結算報告期）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「最も多忙を極めるのは、年度末の決算および来期予算の策定時期です。全社から集まる膨大な実績データを精緻に検証した上で、経営陣が来期の戦略を立案するための根拠となる包括的なレポートを短期間で作成・提出しなければならないためです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（最忙碌的是年度結算及明年度預算編列時期。因為必須在精密驗證全公司匯集的龐大實績數據後，於短時間內製作並提交作為經營層擬定明年策略依據的綜合報告。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：突發專案與高層臨時調閱數據）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「月次の締め作業と、経営陣からの突発的なデータ調査依頼が重なった時が一番忙しいです。定例の報告書作成を進めつつ、市場環境の変化に応じたシミュレーション資料を即座に整理・提出することが求められるため、高度なタイムマネジメントが必要になります。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當月結作業與經營層突發的數據調查委託重疊時最忙。因為必須一邊推進例行報告製作，一邊因應市場環境變化立即整理並提交模擬資料，需要高度的時間管理能力。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q4 ================= -->
+                <div id="p1-q4" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-emerald-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-300 text-emerald-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q4 抽象感受・B1核心題</span>
+                            <span class="jp-text">あなたの仕事で、やりがいを感じるのはどんな時ですか？</span>（工作感到有成就感是什麼時候？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：やりがい（成就感）／ どんな時</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「私が作ったレポートを上司が見て、『とても分かりやすいね、ありがとう』と言ってくれた時に、一番嬉しいです。もっと頑張りたいと思います。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（當主管看了我做的報告，對我說「非常清楚易懂呢，謝謝」的時候最開心。會想要更努力。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「バラバラだったデータをエクセルできれいに整理して、チームの会議がスムーズに終わった時にやりがいを感じます。みんなの役に立っていると感じるからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（把原本零散的資料用Excel整理乾淨，讓團隊會議順利結束時感到很有成就感。因為覺得自己對大家有幫助。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：原基準對應・喜歡跨國界與國際化環境）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「今の仕事の中で、台湾と日本のスタッフと関わりながら働ける<strong>国際的な環境が一番好きです</strong>。自分が整理して提出した報告書が、台湾本社だけでなく日本の取引先との会議でも役に立った時に、大きなやりがいを感じます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（在目前工作中，我最喜歡能與台灣和日本員工互動的國際化環境。當自己整理並提交的報告不僅在台灣總公司、連在與日本客戶的會議上也派上用場時，感到很有成就感。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：報告數據促成公司問題解決）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私が整理したデータ報告書がきっかけで、社内の課題が見つかり、業務が改善された時に一番やりがいを感じます。例えば、残業時間の集計レポートを提出したことで、部署の人員配置が見直された時は本当に嬉しかったです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當我整理的數據報告成為契機，找出公司內部問題並改善業務時最有成就感。例如提交加班時數彙整報告後，促使部門重新檢視人力配置時，真的非常開心。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「読む人の立場から工夫して作成した分析レポートが、経営陣の意思決定に直接役立った時です。単なる数字のまとめではなく、チームで議論して作ったグラフによって『問題点が明確になった』と評価された時に、事務職としての誇りを感じます。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（當站在閱讀者立場用心製作的分析報告，直接幫助到經營層做決策的時候。不只是單純整理數字，而是透過團隊討論製作的圖表獲得「問題點變明確了」的評價時，感受到身為行政職的驕傲。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：從後勤支援轉化為策略價值）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「自分が精緻に整理・分析したレポートが、新規プロジェクトの立ち上げやコスト削減といった会社の重要な意思決定の根拠として採用された時です。バックオフィスでありながら、データの力で企業の成長に直接貢献できていると実感できる点に最大の醍醐味を感じます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當自己精密整理與分析的報告，被採納為啟動新專案或削減成本等公司重要決策的依據時。雖身為後勤部門，卻能切實感受到自己以數據的力量直接貢獻於企業成長，這讓我感到最大的樂趣。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：建立標準化報告機制提升全社效率）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「煩雑だった社内のデータ収集プロセスを標準化し、報告書作成にかかる全社的な工数を大幅に削減できた時に強い達成感を覚えます。各部署の担当者が本来のコア業務に集中できる環境を整えることこそ、事務職の真の価値だと考えています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當將原本繁雜的內部資料收集流程標準化，大幅減少全公司製作報告所耗費的工時，會感到強烈的成就感。我認為打造讓各部門人員能專注於核心業務的環境，正是行政職真正的價值。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q5 ================= -->
+                <div id="p1-q5" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-amber-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-white text-orange-900 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q5 工作原則・B1 High核心題</span>
+                            <span class="jp-text">仕事をする上で、一番大事にしていることは何ですか？</span>（工作上最重視的事情是什麼？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：大事（だいじ）にしている ／ 大切</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「データのミスをしないことと、締め切りを守ることです。レポートを出す前に、いつも2回チェックします。だから、上司は私を信頼してくれます。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（不要弄錯資料，還有遵守截止期限。交報告前我總是檢查兩次，所以主管很信任我。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「正確なデータを使って、分かりやすい報告書を作ることです。そのために、分からない数字がある時は、すぐ営業部の担当者と連絡を取って確認しています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（使用正確的資料製作好懂的報告。為此，當有不懂的數字時，會立刻聯絡業務部負責人確認。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：重視期限與事前溝通）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「一番大事にしているのは、報告書の『正確さ』と『提出期限を守ること』です。例えば、他部署からデータが集まるのが遅れそうな時は、早めにリマインドの連絡をして、会議に絶対間に合うようにスケジュールを管理しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（最重視的是報告的「準確度」與「遵守提交期限」。例如當其他部門資料似乎會延遲交來時，會提早發提醒通知，控管時程以確保絕對趕得上會議。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：重視圖表與重點摘要）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私が大切にしているのは、忙しい上司が短い時間で読める資料を作ることです。具体的には、細かいエクセルの表だけでなく、最初に結論と3つのポイントをまとめた要約ページをつけるようにしています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我重視的是製作讓忙碌的主管能在短時間內讀完的資料。具體來說，除了細部的Excel表格外，還會在開頭加上統整結論與三個重點的摘要頁。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High（原基準完全對應）</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「<strong>報告書を読む上司や他部署の立場から見て</strong>、どうすれば複雑なデータがもっと分かりやすくなるかを常に考えています。また、提出前には必ずチームメンバーと一緒に<strong>レビューや議論を行い</strong>、誰が見ても<strong>一目でポイントが理解でき、使いやすい資料</strong>を作ることを大事にしています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（總是站在閱讀報告的主管與他部門立場，思考如何讓複雜資料變得更好懂。此外，提交前必定與團隊成員一起進行審查與討論，重視打造出誰看都能一目了然掌握重點、容易使用的資料。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：數據客觀性與洞察力兼具）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「データの客観性を担保しつつ、意思決定に直結するインサイト（洞察）を提示することです。ただ事実としての数字を羅列するだけでは報告書の価値は半減します。多角的な視点からデータを検証し、『なぜこの結果になったのか』という仮説まで添えて提出することを信条としております。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（在確保數據客觀性的同時，提出直接連結決策的洞察。若只是羅列作為事實的數字，報告的價值會減半。從多重視角驗證數據，並連同「為何會產生此結果」的假設一併提交，是我的工作信條。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：資訊安全與跨部門信賴關係）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「全社の機密データや売上数字を扱う立場として、徹底した情報セキュリティの管理と、各部署との信頼関係の構築を最優先にしております。正確かつ迅速なレポーティングを実現するためには、日頃から現場の担当者と密に連携し、生きた情報が集まる体制を維持することが不可欠だからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（身為處理全公司機密數據與營收數字的角色，我將徹底的資訊安全管理與建立各部門間的信賴關係列為最優先。因為要實現正確且迅速的報告，平時就必須與第一線人員緊密合作，維持能匯集活資訊的體制。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q6 ================= -->
+                <div id="p1-q6" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-amber-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-white text-orange-900 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q6 問題解決與應變</span>
+                            <span class="jp-text">仕事でデータのミスやトラブルが起きた時、どう対応しますか？</span>（發生資料錯誤或狀況時如何應對？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：ミス ／ トラブル ／ どう対応</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「まず、すぐに上司に報告して謝ります。それから、どこが間違っているか調べて、すぐにデータを直します。同じミスをしないように気をつけます。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（首先立刻向主管報告並道歉。接著調查哪裡出錯並馬上修改資料。會注意不再犯同樣的錯。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「報告書の数字にミスを見つけた時は、隠さずにすぐマネージャーに連絡します。そして、元のデータを提供してくれた部署と協力して、正しい数字に修正して再提出します。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（發現報告數字有錯時，絕不隱瞞並立刻聯絡經理。接著與提供原始資料的部門合作，修正為正確數字後重新提交。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：立即報告並建立防呆公式）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「ミスが起きた時は、まず迅速に上司へ報告し、修正した報告書をすぐに再提出します。その後、なぜミスが起きたのか原因を調べます。例えば、手入力の計算ミスであれば、次回からエクセルの自動計算を使うように改善しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（發生錯誤時，首先迅速向主管報告並立即重新提交修正後的報告。之後調查錯誤原因，例如若是手動輸入的計算錯誤，下次起就會改用Excel自動計算公式。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：跨部門資料延遲或數字不合時的應對）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「他部署から来たデータに矛盾があるなどのトラブルが起きた時は、すぐに電話で担当者に確認します。もし会議までに確定しない場合は、暫定のデータであることを報告書に明記して、上司が誤解しないように対応しています。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當發生其他部門交來的資料有矛盾等狀況時，會立刻打電話向負責人確認。若開會前無法確定，會在報告上註明為暫定數據，避免主管誤解。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「万が一提出した報告書に誤りがあった場合は、影響を受ける上司や関係部署の立場を考え、直ちに訂正版を送付して影響を最小限に抑えます。その上で、個人の注意不足で終わらせず、チーム全体でチェック体制を議論し、再発防止策をマニュアルに反映させています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（萬一提交的報告有誤，會站在受影響的主管與相關部門立場，立即寄送訂正版將影響降到最低。此外不會僅歸咎於個人粗心，而會與全團隊討論檢查機制，將防止再發對策反映至手冊中。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：危機管控與系統性防錯機制）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「データの不備やトラブルが発生した際は、まず事実関係と影響範囲を即座に特定し、ステークホルダーへ迅速に第一報を入れます。応急処置として正しいレポートを再提出した後は、ヒューマンエラーが起きる業務フロー自体の構造的な問題を見直し、チェックの自動化など抜本的な再発防止策を講じます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當發生數據疏漏或狀況時，首先立即確認事實關係與影響範圍，迅速向利害關係人進行第一時間通報。作為應急處置重新提交正確報告後，會重新檢視導致人為錯誤的業務流程結構問題，採取自動化檢查等根本性的防範對策。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：系統故障時的備援方案執行）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「システム障害などで定例の報告書が作成できないトラブルが起きた場合は、パニックにならず代替手段を講じます。日頃からバックアップしているローカルデータを用いて最低限必要な重要指標（KPI）のみを緊急レポートとしてまとめ、経営会議の進行を止めないよう臨機応変に対応しております。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（當發生系統故障等導致無法製作例行報告的狀況時，會保持冷靜採取替代方案。利用平時備份的本機資料，將最低限度必備的重要指標整理為緊急報告，隨機應變以確保經營會議不中斷。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q7 ================= -->
+                <div id="p1-q7" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-amber-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-white text-orange-900 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q7 工作偏好與理由</span>
+                            <span class="jp-text">チームで仕事をするのと、一人で仕事をするのとでは、どちらが好きですか？</span>
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：チーム ／ 一人 ／ どちらが好き</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「私はチームで仕事をする方が好きです。なぜなら、データの量が多い時でも、みんなで助け合って早く報告書を作ることができるからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我比較喜歡團隊工作。因為即使資料量很大，大家也能互相幫忙，很快做出報告書。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「チームで働く方が好きです。私の仕事は、他部署のスタッフと協力してデータを集めたり、同僚と1対1で報告書のチェックをしたりすることが多いからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我比較喜歡在團隊工作。因為我的工作經常需要與其他部門人員合作收集資料，或與同事一對一檢查報告。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：喜歡團隊合作・能互相檢查與激發點子）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私はチームで仕事をする方が好きです。理由は、一人でデータを整理していると見落としてしまうミスでも、チームのメンバーと確認し合うことで防げるからです。また、みんなで相談した方がより分かりやすい報告書が作れます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我比較喜歡團隊工作。理由是一個人整理資料時容易忽略的錯誤，透過與團隊成員互相確認就能預防。而且大家一起商量能做出更好懂的報告。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：依業務階段區分・整理靠個人、報告審查靠團隊）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「どちらにも良さがありますが、作業によって使い分けるのが好きです。例えば、細かいエクセルのデータを集計する時は一人で集中して作業し、報告書の構成を考える時はチームで意見を出し合うのが一番効率的だと思います。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（兩者各有好處，我喜歡依作業性質區分使用。例如彙整細部Excel數據時一個人專心做，思考報告架構時則與團隊集思廣益，這樣最有效率。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「私はチームで仕事をする方が好きです。質の高い報告書を提出するためには、自分の視点だけでなく、メンバーとレビューや議論を重ねて、読む人の立場から見て分かりやすい資料にブラッシュアップしていくプロセスが不可欠だからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我比較喜歡團隊工作。因為要提交高品質報告，不能只有自己的視角，還必須與成員反覆審查與討論，站在閱讀者立場將資料打磨得更易懂，這個過程不可或缺。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：跨部門協作創造綜效）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私はチーム、特に部署を横断したコラボレーションで仕事を進めることを好みます。事務職が扱うデータの背後には必ず営業や開発の現場の動きがあるため、多様なメンバーと議論を交わすことで初めて、単なる数字の羅列ではない、実態を正確に反映した価値ある報告書が作成できると考えるからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我偏好團隊合作，特別是跨部門協作推進工作。因為行政職處理的數據背後必定有業務或研發第一線的動態，唯有與多元成員交流討論，才能製作出非單純羅列數字、而是準確反映實況的有價值報告。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：個人高度專注與團隊知識共享的平衡）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「業務の性質に応じて両者を組み合わせることが最も生産的だと考えます。膨大なデータの分析やレポートのドラフト作成においては個人の高い集中力が求められますが、最終的な品質向上や業務ノウハウの共有においては、チームでの相互レビューが不可欠だからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我認為根據業務性質將兩者結合最具生產力。在龐大數據分析與報告草稿製作上需要個人的高度專注力，但在最終品質提升與業務知識共享上，團隊的相互審查則是不可或缺的。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q8 ================= -->
+                <div id="p1-q8" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-rose-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-300 text-rose-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q8 職涯規劃與成長</span>
+                            <span class="jp-text">今後、仕事でどのようなスキルを身につけたいですか？</span>（今後想培養什麼樣的技能？）
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：今後（こんご）／ スキル ／ 身につけたい</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「もっと高いレベルのエクセルのスキルと、ビジネス日本語を身につけたいです。そうすれば、もっと早くきれいな報告書を作ることができるからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（想培養更高階的Excel技能與商用日語。因為這樣就能更快做出漂亮的報告書。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「データを自動で集計するプログラミングや、BIツールの使い方を身につけたいです。毎日のデータ整理の時間を減らして、もっと詳しいレポートを作りたいからです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（想學會自動彙整資料的程式或BI工具用法。因為想減少每天整理資料的時間，製作更詳細的報告。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：學習進階數據視覺化工具 Power BI / Tableau）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「今後は、エクセルだけでなく『Power BI』などのデータ分析ツールのスキルを身につけたいです。なぜなら、たくさんのデータを自動でグラフ化できれば、上司により分かりやすい報告書をスピーディーに提出できるからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（今後除了Excel外，還想培養Power BI等數據分析工具的技能。因為若能將大量數據自動圖表化，就能更迅速地向主管提交好懂的報告。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：提升日語簡報與口頭報告能力）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「日本語でのプレゼンテーション能力をもっと高めたいと考えています。現在は書類でレポートを提出することが多いですが、今後は日本の取引先や日本人マネージャーに対して、自分の言葉でデータの分析結果を説明できるようになりたいからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我想進一步提升日語簡報能力。目前雖然多半是以書面提交報告，但今後希望能對日本客戶或日籍經理，用自己的話說明數據分析結果。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「データサイエンスの基礎知識と、業務自動化のスキルを身につけたいです。報告書を利用する経営陣や他部署の立場から見て、過去の数字をまとめるだけでなく、『今後どうなるか』という予測データまで一目で分かる形で提供できるようになりたいと考えています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（想培養資料科學基礎知識與業務自動化技能。站在使用報告的經營層與他部門立場，希望能不只統整過去數字，還能以一目了然的形式提供「未來走向」的預測數據。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：結合統計分析與經營策略規劃能力）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「今後は単なるデータの集計・可視化スキルにとどまらず、統計学的なデータ分析力および経営戦略の知識を習得したいと考えております。事務職として集約した膨大なデータから市場のトレンドを読み解き、経営層に対して具体的なアクションプランを提言できる人材へとステップアップしたいからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（今後不想只停留在單純的數據彙整與視覺化技能，還想習得統計學數據分析力與經營策略知識。因為身為行政職，希望能從彙整的龐大數據中解讀市場趨勢，晉升為能向經營層提出具體行動方案的人才。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：導入 AI 與 RPA 推動全公司數位轉型）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「AIツールやRPA（業務自動化）の導入・運用スキルを身につけたいです。社内の定型的なデータ整理やレポート作成業務を自動化することで、組織全体の生産性を抜本的に引き上げ、より創造的な業務にリソースを配分できる仕組みを構築したいと考えております。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（想培養AI工具與RPA業務自動化的導入及運用技能。希望透過將公司內部例行的資料整理與報告製作自動化，從根本提升組織整體的生產力，建立能將資源分配給更具創造性業務的機制。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q9 ================= -->
+                <div id="p1-q9" class="mb-8 bg-white rounded-2xl shadow-md border-2 border-rose-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-300 text-rose-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q9 科技趨勢・B2進階題</span>
+                            <span class="jp-text">仕事でのAIやデジタルツールの活用について、どう思いますか？</span>
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：AI ／ デジタルツール ／ どう思いますか</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「とてもいいことだと思います。AIを使えば、たくさんのデータを早く整理できます。でも、時々間違いがあるので、最後は人間がチェックする必要があります。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我認為是很棒的事。用AI就能快速整理大量資料。但有時會有錯，最後還是需要由人來檢查。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「積極的に使うべきだと思います。私たちの事務チームでも、デジタルツールを使ってデータを集める時間を短くし、より分かりやすい報告書を作ることに時間を使っています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我認為應該積極使用。我們的行政團隊也使用數位工具縮短收集資料的時間，把時間花在製作更好懂的報告上。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：贊成導入・能減少重複作業並減少加班）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私はAIやデジタルツールの活用に大賛成です。例えば、今まで手作業で行っていたデータの集計やグラフ作成を自動化できれば、残業時間を減らすことができますし、人間はデータの分析や改善提案にもっと集中できるからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我非常贊成活用AI與數位工具。例如若能將至今手動進行的數據彙整與圖表製作自動化，就能減少加班時間，人類也能更專注於數據分析與改善提案。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：肯定效率但強調資訊安全與人工確認）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「業務の効率を上げるためにとても役に立つと思います。ただし、会社の大切な売上データや個人情報を扱うため、セキュリティのルールをしっかり守ることと、AIが作った報告書の数字を人間が必ず最終確認することが大切だと思います。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我認為對提升業務效率很有幫助。但因為會處理公司重要的營收資料與個資，確實遵守資安規則，以及由人類進行最終確認AI產出的報告數字，是非常重要的。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「デジタルツールの活用は不可欠だと思います。ただ導入するだけでなく、実際にデータを入力する社員や報告書を読む上司の立場から見て、本当に使いやすいツールかどうかをチームで議論・検証しながら進めることが重要だと考えています。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我認為活用數位工具不可或缺。但不能只是單純導入，站在實際輸入資料的員工與閱讀報告的主管立場，與團隊一邊討論驗證該工具是否真的好用、一邊推動，才是最重要的。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：重新定義行政職的價值）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「AIやデジタルツールの導入は、事務職の役割を根本から進化させる好機だと捉えております。もし単純なデータ転記や定型レポートの作成スピードだけで勝負するなら、人間がAIに勝つことはできません。だからこそ、定型業務はツールに任せ、人間は『データの背景にある文脈を読み解き、部門間の調整や意思決定を支援する』という付加価値の高い業務へシフトすべきだと考えます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我將導入AI與數位工具視為從根本進化行政職角色的良機。若只比拚單純的數據謄寫或例行報告製作速度，人類無法勝過AI。正因如此，應將例行業務交給工具，人類則轉向「解讀數據背後的脈絡，支援部門間協調與決策」等高附加價值業務。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：打破形式化報告，實現即時數據共享）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「積極的に推進すべきですが、同時に従来の業務プロセス自体を見直す必要があります。古い慣習のまま『紙の報告書を提出するためのデジタル化』を行っても意味がありません。クラウドやAIを活用してリアルタイムでデータを共有し、形骸化した定例報告を廃止するなど、意思決定のスピードを高める抜本的なDX（デジタルトランスフォーメーション）を進めるべきです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（應積極推動，但同時必須重新檢視傳統業務流程本身。若維持舊習慣只做「為了提交紙本報告的數位化」是沒有意義的。應該活用雲端與AI即時共享數據，廢除流於形式的例行報告，推動能提升決策速度的根本性數位轉型。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= Q10 ================= -->
+                <div id="p1-q10" class="mb-4 bg-white rounded-2xl shadow-md border-2 border-rose-100 overflow-hidden scroll-mt-16">
+                    <div class="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-5 py-3.5 flex flex-wrap justify-between items-center">
+                        <h3 class="font-bold text-lg">
+                            <span class="bg-yellow-300 text-rose-950 font-black text-xs px-2.5 py-1 rounded-full mr-2">Q10 企業管理・B2壓軸題</span>
+                            <span class="jp-text">外国人材（または多様な社員）が活躍するために、企業は何をすべきですか？</span>
+                        </h3>
+                        <span class="text-xs bg-white/20 px-2.5 py-1 rounded-full font-semibold">🎧 關鍵字：外国人材 ／ 企業がすべきこと</span>
+                    </div>
+                    <div class="p-5 space-y-3.5 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「分かりやすいマニュアルを作ることが大切だと思います。報告書の書き方やデータの整理のルールを簡単にすれば、外国人のスタッフも働きやすくなります。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（我認為製作好懂的手冊很重要。把報告書寫法和資料整理規則變簡單，外籍員工也會更好工作。）</p>
+                        </div>
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「日本語のレベルだけで評価しないことが大切です。例えば、報告書の日本語が少し変でも、データの分析がとても上手な人がいるので、お互いに協力してサポートすべきです。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（不要只憑日語程度來評價是很重要的。例如有些人雖然報告的日文有點奇怪，但非常擅長數據分析，應該互相合作支援。）</p>
+                        </div>
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：提供雙語報告範本與明確指引）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「企業は、業務のルールや報告書のフォーマットを標準化して、誰にでも分かりやすくすべきだと思います。例えば、日本語と英語や中国語を併記したマニュアルを用意すれば、外国人材も自分の専門スキルをすぐに発揮できるようになります。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我認為企業應將業務規則與報告格式標準化，讓所有人都容易理解。例如準備日語與英中文並列的說明手冊，外籍人才也能立刻發揮自己的專業技能。）</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-2.5">
+                                <span class="level-badge badge-b1">B1（例2：尊重多元觀點並改善企業文化）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「日本のやり方を押し付けるのではなく、外国人社員の新しいアイデアを受け入れる環境を作ることが大切です。多様な視点でデータを分析した方が、今まで気づかなかった課題が見つかり、会社にとってもプラスになるからです。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（不要強加日本的作法，而是創造接納外籍員工新點子的環境很重要。因為從多元視角分析數據，更能找出過去沒注意到的問題，對公司也是加分。）</p>
+                            </div>
+                        </div>
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium">「外国人材の立場から見て、日本特有の曖昧な指示や複雑な報告書作成が大きな負担になっています。ですから、企業は業務の目的を明確に共有し、多文化のメンバー同士が自由に議論やレビューができるオープンな職場環境を整えるべきだと考えます。」</p>
+                            <p class="text-xs text-slate-600 mt-1">（站在外籍人才的立場來看，日本特有的模糊指示與複雜的報告製作是很大的負擔。因此，我認為企業應明確共享業務目的，打造讓多元文化成員能自由討論與審查的開放職場環境。）</p>
+                        </div>
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：原基準完全對應・看重日語能力以外的數據分析與多元價值）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「私が各部署の報告書を取りまとめる中で感じるのは、外国人材の中には日本語が堪能な人もいれば、日本の商習慣や細かい文書作成がまだ得意ではない人も多くいるということです [03:24][03:29]。しかし、もし『日本語能力』や『報告書の体裁』だけで評価するなら、日本人ではなく外国人を採用する理由がなくなってしまいます [03:37]。多様な文化を社内に取り入れることで職場の雰囲気も変わりますし [03:47]、海外の新規事業でも現地ならではのデータの見方が役立ちます [03:52]。したがって企業は今後、<strong>日本語能力以外の『データ分析力や専門性』といった強みをもっと丁寧に見極めて評価すべきだ</strong>と考えます [03:56]。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（我在彙整各部門報告時感受到，外籍人才中雖有日語精通者，但也有許多人還不擅長日本商業習慣或繁細的文書製作。然而若只憑「日語能力」或「報告格式」來評判，就沒有錄取外國人而非日本人的理由了。引進多元文化不僅能改變職場氛圍，拓展海外新事業時，在地特有的數據視角也能派上用場。因此企業今後更應仔細發掘並評估「日語能力以外的數據分析力與專業性」等優勢。）</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-2.5">
+                                <span class="level-badge badge-b2">B2（例2：改革制度面與建立成果導向的評估體系）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium">「多様な人材が真に活躍するためには、暗黙の了解に頼る業務スタイルを改め、評価基準の透明化と業務プロセスの標準化を図るべきです。定型的なデータ整理や報告書の作成ルールをシンプルに統一することで言語の壁を下げ、抽出されたデータからいかに新しい価値や業務改善を生み出したかという『実質的なアウトプット』によって正当に評価する人事制度への転換が求められます。」</p>
+                                <p class="text-xs text-slate-600 mt-1">（為了讓多元人才真正發揮所長，應改革依賴默契的業務風格，力求評核標準透明化與業務流程標準化。透過將例行的資料整理與報告製作規則簡單統一以降低語言門檻，並轉型為根據如何從數據中創造新價值或業務改善之「實質產出」來公正評核的人事制度。）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================================================================= -->
+            <!-- PART 2: 音読 (8 Questions) -->
+            <!-- ================================================================= -->
+            <section id="part2" class="mb-14 scroll-mt-16">
+                <div class="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600 text-white p-5 rounded-t-2xl flex flex-wrap justify-between items-center gap-2 shadow-md">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-yellow-200 block">Part 2：Reading Aloud</span>
+                        <h2 class="text-2xl font-black">📖 音読（商用朗讀問題・全 8 問預測）</h2>
+                    </div>
+                    <div class="text-xs bg-white/20 backdrop-blur-sm px-3.5 py-2 rounded-xl font-bold text-white border border-white/30">
+                        問題数：8問 ｜ 準備：なし ｜ 回答：各10秒 ｜ テキスト：あり
+                    </div>
+                </div>
+                <div class="bg-teal-50/90 p-4 text-xs md:text-sm text-teal-950 border-x-2 border-b-2 border-teal-200 rounded-b-2xl mb-6 jp-text">
+                    <strong>【官方指示】</strong> 文字で示された文を声に出して読む問題です。なるべく意味を理解しながら、アクセントやイントネーションにも気をつけて読みましょう。<br>
+                    <span class="text-teal-800 font-bold">💡 A2～B2 朗讀高分關鍵：漢字讀音零失誤、在粉紅斜線 <span class="pause-mark">／</span> 處自然換氣、句尾平穩不拖音！</span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <!-- 音読 1 -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50/50 p-5 rounded-2xl border-2 border-emerald-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 1 問（範例必考：提交報告）</span>
+                            <span class="text-xs font-bold text-emerald-700">⏱️ 6～8秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            <ruby>月次<rt>げつじ</rt></ruby><ruby>報告書<rt>ほうこくしょ</rt></ruby>を<ruby>添付<rt>てんぷ</rt></ruby>いたしますので、<span class="pause-mark">／</span>ご<ruby>査収<rt>さしゅう</rt></ruby>のほど<span class="pause-mark">／</span>よろしくお<ruby>願<rt>ねが</rt></ruby>いいたします。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 隨信附上月度報告書，敬請查收。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「月次（げつじ）」「添付（てんぷ）」「査収（さしゅう，長音）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 2 -->
+                    <div class="bg-gradient-to-br from-white to-cyan-50/50 p-5 rounded-2xl border-2 border-cyan-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 2 問（催交各部門數據）</span>
+                            <span class="text-xs font-bold text-cyan-700">⏱️ 6～8秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            <ruby>今月分<rt>こんげつぶん</rt></ruby>の<ruby>売上<rt>うりあげ</rt></ruby>データは、<span class="pause-mark">／</span><ruby>今週<rt>こんしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>正午<rt>しょうご</rt></ruby>までに<span class="pause-mark">／</span>ご<ruby>提出<rt>ていしゅつ</rt></ruby>ください。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 本月份的銷售數據，請於本週五中午12點前提交。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「売上（うりあげ）」「正午（しょうご）」「提出（ていしゅつ）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 3 -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50/50 p-5 rounded-2xl border-2 border-emerald-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 3 問（會議資料統計說明）</span>
+                            <span class="text-xs font-bold text-emerald-700">⏱️ 7～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            お<ruby>手元<rt>てもと</rt></ruby>の<ruby>資料<rt>しりょう</rt></ruby>の<ruby>３<rt>さん</rt></ruby>ページに、<span class="pause-mark">／</span><ruby>上半期<rt>かみはんき</rt></ruby>の<ruby>集計<rt>しゅうけい</rt></ruby><ruby>結果<rt>けっか</rt></ruby>を<span class="pause-mark">／</span>まとめております。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 在各位手邊資料的第3頁，彙整了上半年度的統計結果。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 必考陷阱詞「上半期（かみはんき）」、「集計結果（しゅうけいけっか）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 4 -->
+                    <div class="bg-gradient-to-br from-white to-cyan-50/50 p-5 rounded-2xl border-2 border-cyan-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 4 問（電話應對與回電）</span>
+                            <span class="text-xs font-bold text-cyan-700">⏱️ 7～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            あいにく<ruby>担当者<rt>たんとうしゃ</rt></ruby>が<ruby>席<rt>せき</rt></ruby>を<ruby>外<rt>はず</rt></ruby>しておりますので、<span class="pause-mark">／</span><ruby>戻<rt>もど</rt></ruby>り<ruby>次第<rt>しだい</rt></ruby>、<span class="pause-mark">／</span><ruby>折<rt>お</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>しご<ruby>連絡<rt>れんらく</rt></ruby>いたします。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 不巧負責人目前不在位置上，待他回來後會立刻回電給您。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「戻り次第（もどりしだい）」「折り返し（おりかえし）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 5 -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50/50 p-5 rounded-2xl border-2 border-emerald-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 5 問（專案進度匯報）</span>
+                            <span class="text-xs font-bold text-emerald-700">⏱️ 7～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            プロジェクトの<ruby>進捗<rt>しんちょく</rt></ruby><ruby>状況<rt>じょうきょう</rt></ruby>につきまして、<span class="pause-mark">／</span><ruby>明日<rt>みょうにち</rt></ruby>の<ruby>定例<rt>ていれい</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>にて<span class="pause-mark">／</span>ご<ruby>報告<rt>ほうこく</rt></ruby><ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げます。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 關於專案的進度狀況，將於明天的例行會議上向您報告。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 商務必考詞「進捗状況（しんちょくじょうきょう）」「定例（ていれい）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 6 -->
+                    <div class="bg-gradient-to-br from-white to-cyan-50/50 p-5 rounded-2xl border-2 border-cyan-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 6 問（數據金額訂正致歉）</span>
+                            <span class="text-xs font-bold text-cyan-700">⏱️ 7～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            <ruby>先日<rt>せんじつ</rt></ruby>お<ruby>送<rt>おく</rt></ruby>りした<ruby>見積書<rt>みつもりしょ</rt></ruby>の<ruby>金額<rt>きんがく</rt></ruby>に<span class="pause-mark">／</span><ruby>一部<rt>いちぶ</rt></ruby><ruby>誤<rt>あやま</rt></ruby>りがございましたので、<span class="pause-mark">／</span><ruby>謹<rt>つつし</rt></ruby>んで<ruby>訂正<rt>ていせい</rt></ruby>いたします。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 前幾天寄給您的報價單金額有部分錯誤，謹此訂正。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「見積書（みつもりしょ）」「誤り（あやまり）」「謹んで（つつしんで）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 7 -->
+                    <div class="bg-gradient-to-br from-white to-emerald-50/50 p-5 rounded-2xl border-2 border-emerald-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 7 問（資料庫維護通知）</span>
+                            <span class="text-xs font-bold text-emerald-700">⏱️ 8～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            システムメンテナンスに<ruby>伴<rt>ともな</rt></ruby>い、<span class="pause-mark">／</span><ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>終日<rt>しゅうじつ</rt></ruby>、<span class="pause-mark">／</span>データベースへのアクセスが<ruby>制限<rt>せいげん</rt></ruby>されます。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 配合系統維護，週日全天將限制存取資料庫。</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「伴い（ともない）」「終日（しゅうじつ）」「制限（せいげん）」。
+                        </p>
+                    </div>
+
+                    <!-- 音読 8 -->
+                    <div class="bg-gradient-to-br from-white to-cyan-50/50 p-5 rounded-2xl border-2 border-cyan-200 shadow-sm hover:shadow-md transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">第 8 問（高階敬語：請求核准）</span>
+                            <span class="text-xs font-bold text-cyan-700">⏱️ 8～9秒</span>
+                        </div>
+                        <p class="jp-text text-lg font-bold text-slate-800 leading-loose mb-2">
+                            ご<ruby>多忙中<rt>たぼうちゅう</rt></ruby><ruby>恐縮<rt>きょうしゅく</rt></ruby>ではございますが、<span class="pause-mark">／</span><ruby>来期<rt>らいき</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>計画案<rt>けいかくあん</rt></ruby>について<span class="pause-mark">／</span>ご<ruby>承認<rt>しょうにん</rt></ruby>いただけますでしょうか。
+                        </p>
+                        <p class="text-xs text-slate-600 mb-2"><strong>中文意思：</strong> 百忙之中非常抱歉，關於明年度的預算計畫案，不知能否獲得您的核准呢？</p>
+                        <p class="text-xs text-purple-900 bg-purple-100/80 p-2.5 rounded-xl font-medium">
+                            🎯 <strong>發音重點：</strong> 「ご多忙中（たぼうちゅう）」「恐縮（きょうしゅく）」「承認（しょうにん）」。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================================================================= -->
+            <!-- PART 3: スピーチ (1-Minute Speech, A2 ~ B2 Only) -->
+            <!-- ================================================================= -->
+            <section id="part3" class="mb-6 scroll-mt-16">
+                <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 text-white p-5 rounded-t-2xl flex flex-wrap justify-between items-center gap-2 shadow-md">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-yellow-100 block">Part 3：1-Minute Speech (A2 ～ B2)</span>
+                        <h2 class="text-2xl font-black">⏱️ スピーチ（1 分鐘指定三要點演講）</h2>
+                    </div>
+                    <div class="text-xs bg-white/20 backdrop-blur-sm px-3.5 py-2 rounded-xl font-bold text-white border border-white/30">
+                        問題数：1問 ｜ 準備：40秒 ｜ 回答：60秒 ｜ テキスト：あり（3要點）
+                    </div>
+                </div>
+                <div class="bg-amber-50/90 p-4 text-xs md:text-sm text-amber-950 border-x-2 border-b-2 border-amber-200 rounded-b-2xl mb-6 jp-text">
+                    <strong>【官方指示】</strong> 与えられたテーマについて1分間で話します。スピーチに入れなければいけない3つのポイントがあるので、回答時間を全部使って、3つのポイントに沿った話をしましょう。内容が事実と違ってもかまいません。
+                </div>
+
+                <!-- 演講主題一：休みの日にしたいこと -->
+                <div class="mb-10 bg-white rounded-2xl shadow-lg border-2 border-amber-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-amber-100 via-orange-100 to-pink-100 p-5 border-b-2 border-amber-200">
+                        <span class="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-extrabold px-3.5 py-1 rounded-full shadow-sm">主題一（指定必考題）</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-2 jp-text">
+                            休（やす）みの日（ひ）にしたいことについて1分（ふん）で話（はな）してください。
+                        </h3>
+                        <ul class="mt-3 space-y-1 text-sm font-bold text-amber-950 jp-text bg-white/90 p-3.5 rounded-xl border border-amber-300 shadow-inner">
+                            <li>🎯 ポイント①：誰（だれ）と何（なに）をしたいか（想跟誰做什麼）</li>
+                            <li>🎯 ポイント②：それをしたい理由（りゆう）（理由 👉 <span class="text-rose-600">結合「平日坐辦公室整理 Excel 資料、趕交報告很疲勞」！</span>）</li>
+                            <li>🎯 ポイント③：次（つぎ）にいつそれができるか（下次什麼時候可以做）</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 space-y-4 text-sm">
+                        <!-- A2 -->
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <span class="text-xs text-blue-800 font-bold">基礎句子完整，清楚交代三個要點</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「私は休みの日に、<strong>大学の友達と一緒に美味しいカフェへ行って、おしゃべりをしたいです</strong> [要點①]。<br>
+                                なぜなら、私の仕事は会社の事務アシスタントで、毎日たくさんのデータを整理したり、レポートを作ったりしています。仕事は楽しいですが、平日はずっとパソコンを見ているので、とても疲れます。だから、休みの日は友達と甘いケーキを食べて、リフレッシュしたいです [要點②]。<br>
+                                今週は少し忙しいですが、<strong>来週の土曜日なら時間があるので、友達と行くことができます</strong> [要點③]。とても楽しみです。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日我想跟大學朋友一起去好吃的咖啡廳聊天[①]。因為我的工作是公司行政助理，每天整理很多資料、做報告。雖然工作很開心，但平日一直看電腦所以很累，休假日想跟朋友吃甜點放鬆[②]。這週有點忙，但下週六有時間可以跟朋友去，非常期待[③]。</p>
+                        </div>
+
+                        <!-- A2 High -->
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <span class="text-xs text-teal-800 font-bold">結合具體跨部門行政工作說明理由，時間連接自然</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「休みの日にしたいことは、<strong>家族と一緒に台北の近くの温泉旅館へ旅行に行くことです</strong> [要點①]。<br>
+                                その理由は、普段の仕事で肩や目がとても疲れているからです。私は台湾の企業で事務スタッフとして働いており、毎日各部署と協力してデータを整理し、マネージャーに1対1でレポートを提出しています。ずっとオフィスで座ってパソコン作業をしているので、休日は温泉に入ってゆっくり体を休めたいです [要點②]。<br>
+                                今週は月末のレポート作成がありますが、<strong>来月の最初の連休に家族と行く予約をしています</strong> [要點③]。それまで仕事を頑張りたいと思います。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想做的事是跟家人一起去台北附近的溫泉旅館旅行[①]。理由是平時工作讓肩膀和眼睛很累。我在台灣企業擔任行政，每天與各部門合作整理資料、向經理一對一交報告。因為一直坐在辦公室用電腦，假日想泡溫泉好好休息[②]。這週雖有月底報告要做，但已預約好下個月第一個連假跟家人去[③]。</p>
+                        </div>
+
+                        <!-- B1 (2 Examples) -->
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：與朋友去露營爬山・遠離電腦螢幕與數字）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「私が休みの日にしたいことは、<strong>仲の良い同僚や友人と一緒に、自然豊かな山へキャンプやハイキングに行くことです</strong> [要點①]。<br>
+                                    そう思う理由は、平日のデスクワークの疲れをリフレッシュしたいからです。私は台湾の会社で営業事務をしており、毎日エクセルで売上データを集計したり、上司へ提出する報告書を作成したりしています。一日中パソコンの画面と数字に向き合っているため、休日はスマートフォンやパソコンから離れて、自然の中で体を動かしたいと考えています [要點②]。<br>
+                                    ちょうど今週末に月次報告書の提出が終わるので、<strong>再来週の土日を使って、友達と苗栗（ミャオリー）のキャンプ場へ行く予定です</strong> [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想跟要好的同事朋友一起去自然豐富的山上露營健行[①]。理由是想消除平日坐辦公桌的疲勞。我在台灣公司做營業行政，每天用Excel彙整銷售數據、製作提交給主管的報告。因為整天面對電腦螢幕與數字，假日想遠離手機電腦，在大自然中活動身體[②]。這週末剛好交完月報，預計下下週六日跟朋友去苗栗露營區[③]。</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-3">
+                                <span class="level-badge badge-b1">B1（例2：與日本朋友聚餐交流・兼顧紓壓與日語實戰）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「休みの日にしたいことは、<strong>台湾に住んでいる日本人の友人と一緒に、新しくオープンした日本料理のレストランへ食事に行くことです</strong> [要點①]。<br>
+                                    理由は二つあります。一つ目は、普段は会社で各部署のデータを整理して報告書を提出する忙しい毎日を送っているので、美味しいものを食べてストレスを解消したいからです。二つ目は、仕事でも日系企業向けの資料を作ることがあるため、友人と楽しく話しながら生きた日本語の表現を学びたいからです [要點②]。<br>
+                                    今週は大きな会議の準備がありますが、<strong>来週の日曜日ならお互いの予定が合うので、一緒に食事に行く約束をしています</strong> [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想跟住在台灣的日本朋友一起去新開的日本料理餐廳吃飯[①]。理由有二：一是平時在公司過著整理各部門資料、交報告的忙碌日子，想吃美食紓壓；二是工作上也會製作給日商的資料，想邊跟朋友開心聊天邊學習活生生的日語表現[②]。這週雖有大型會議準備，但下週日彼此都有空，已約好一起去吃飯[③]。</p>
+                            </div>
+                        </div>
+
+                        <!-- B1 High -->
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <span class="text-xs text-amber-900 font-bold">段落層次分明，展現工作品質與生活平衡的思考</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「私が休みの日にしたいことは、<strong>家族と一緒に携帯電話を持たずに、海辺のカフェや美術館へ行ってゆっくり過ごすことです</strong> [要點①]。<br>
+                                なぜそれをしたいかというと、普段の業務で頭と目を酷使しているため、デジタルデトックスが必要だと感じているからです。私は事務職として、読む人の立場から見て一目で分かる報告書を作るために、毎日細かい数字のチェックやチームでの議論に集中しています。仕事の質を高く保つためにも、休日は全く違う環境で感性を磨く時間が大切だと考えています [要點②]。<br>
+                                今週の金曜日までに四半期の報告書を上司に提出する予定ですので、それが無事に終わった<strong>今度の土曜日に、早速家族と出かける計画を立てています</strong> [要點③]。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想跟家人一起不帶手機，去海邊咖啡廳或美術館悠閒度過[①]。之所以想這麼做，是因為平時業務過度使用大腦與眼睛，覺得需要數位排毒。身為行政職，為了站在閱讀者立場做出一目了然的報告，每天都專注於檢查細微數字與團隊討論。為了維持高工作品質，假日到完全不同的環境培養感性是很重要的[②]。預計本週五前向主管提交季報，順利結束後的這週六就計畫跟家人出門[③]。</p>
+                        </div>
+
+                        <!-- B2 (2 Examples) -->
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：從高密度數據工作切換至身心修復與生產力循環）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「休日に実現したいことは、<strong>パートナーと共に台北郊外の山間部にある温泉宿に滞在し、心身を完全にリフレッシュさせることです</strong> [要點①]。<br>
+                                    その最大の理由は、オンとオフの明確な切り替えによって、仕事の生産性を維持・向上させたいからです。私は台湾企業にて全社のデータ集計および経営報告書の作成を担っており、平日はわずかな数値の誤差も許されない緊張感の中で業務を遂行しております。こうした緻密な分析業務において高いパフォーマンスを発揮し続けるには、休日にデジタル機器から完全に離れ、脳の疲労をリセットする時間が不可欠だと考えております [要點②]。<br>
+                                    現在取り組んでいる月次決算レポートの提出が来週水曜日に完了いたしますので、<strong>その直後の週末に有給休暇を1日合わせて、2泊3日で訪れる手配を進めております</strong> [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想實現的是與伴侶一同入住台北郊區山間的溫泉旅宿，讓身心徹底充電[①]。最大理由是希望透過工作與休假的明確切換，維持並提升工作生產力。我在台灣企業負責全公司數據彙整與經營報告製作，平日都在不容許絲毫數值誤差的緊繃感中執行業務。要在如此精密的分析業務中持續發揮高表現，假日時完全遠離數位設備、重整大腦疲勞的時間不可或缺[②]。目前進行中的月結報告將於下週三提交完畢，已安排在緊接著的週末搭配一天特休，進行三天兩夜的造訪[③]。</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-3">
+                                <span class="level-badge badge-b2">B2（例2：與跨產業友人進行讀書會交流・拓展商業分析視野）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「私が休みの日にしたいことは、<strong>異なる業界で働く友人たちとカフェに集まり、ビジネス書や最新のトレンドについて意見交換をする読書会を開くことです</strong> [要點①]。<br>
+                                    理由は、自社の枠組みにとらわれない多角的な視点を養いたいからです。普段、社内のデータを整理し経営陣へ報告書を提出する業務に従事しておりますが、同じ組織の数字ばかりを見ていると、どうしても思考が内向きになりがちです。他業界の友人と議論を交わすことは、良い気分転換になるだけでなく、月曜日からのレポート作成において新たな切り口や分析のヒントを得る貴重な機会にもなります [要點②]。<br>
+                                    この読書会は月に一度開催しており、<strong>次回は再来週の日曜日の午後に、台北市内のブックカフェで実施する予定となっております</strong> [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：休假日想與在不同產業工作的朋友們聚在咖啡廳，舉辦交換商業書籍與最新趨勢意見的讀書會[①]。理由是想培養不受限於自家公司框架的多元視角。平時雖從事整理公司內部數據並向經營層交報告的業務，但若只盯著同一組織的數字，思考難免流於封閉。與其他產業的朋友交流討論不僅是很好的心情轉換，更是為週一的報告製作獲取新切角與分析靈感的寶貴機會[②]。此讀書會每月舉辦一次，下次預計於下下週日下午在台北市內的書香咖啡廳舉行[③]。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 演講主題二：最近、仕事で工夫したこと -->
+                <div class="mb-6 bg-white rounded-2xl shadow-lg border-2 border-purple-200 overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 p-5 border-b-2 border-purple-200">
+                        <span class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs font-extrabold px-3.5 py-1 rounded-full shadow-sm">主題二（職場高頻預測題：工作改善與工夫）</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-2 jp-text">
+                            最近、仕事で工夫したこと（または改善したこと）について1分で話してください。
+                        </h3>
+                        <ul class="mt-3 space-y-1 text-sm font-bold text-indigo-950 jp-text bg-white/90 p-3.5 rounded-xl border border-purple-300 shadow-inner">
+                            <li>🎯 ポイント①：どんな課題（かだい）や問題があったか（原本有什麼課題或問題）</li>
+                            <li>🎯 ポイント②：具体的（ぐたいてき）に何を工夫したか（具體下了什麼功夫／做了什麼）</li>
+                            <li>🎯 ポイント③：その結果（けっか）どうなったか（結果變得如何）</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 space-y-4 text-sm">
+                        <div class="level-item lv-a2 p-4 bg-gradient-to-r from-blue-50 to-indigo-50/70 rounded-xl border-l-8 border-blue-500 shadow-sm">
+                            <span class="level-badge badge-a2">A2</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「最近、仕事でデータの集め方を工夫しました。以前は、営業スタッフからデータが来るのが遅くて、報告書を作る時間が足りないという問題がありました [要點①]。<br>
+                                そこで私は、締め切りの前日にみんなにリマインドのメッセージを送るようにしました。また、入力しやすい簡単なエクセルの表を作りました [要點②]。<br>
+                                その結果、みんなが時間通りにデータを出してくれるようになり、遅れずに上司へレポートを提出できるようになりました [要點③]。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近在工作上改良了收集資料的方法。以前業務交資料很慢，有做報告時間不夠的問題[①]。於是我開始在截止前一天發提醒訊息給大家，並做了容易輸入的簡單Excel表[②]。結果大家都會準時交資料，我也能不遲交地向主管提交報告[③]。</p>
+                        </div>
+
+                        <div class="level-item lv-a2-high p-4 bg-gradient-to-r from-cyan-50 to-teal-50/70 rounded-xl border-l-8 border-cyan-500 shadow-sm">
+                            <span class="level-badge badge-a2-high">A2 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「最近、仕事でレポートの作り方を改善しました。以前は、各部署から集まるデータの形がバラバラで、整理するのにとても時間がかかるという問題がありました [要點①]。<br>
+                                そこで私は、同僚と協力して、みんなが同じルールで入力できる共通のエクセルシートを作りました。そして、各部署の担当者に使い方を説明しました [要點②]。<br>
+                                その結果、データを整理する時間が半分になり、計算ミスもなくなりました。マネージャーにも『レポートが早くて分かりやすい』と褒められました [要點③]。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近改善了報告製作方式。以前各部門交來的資料格式五花八門，整理很花時間[①]。於是我與同事合作做出能用相同規則輸入的共通Excel表，並向各部門負責人說明用法[②]。結果整理時間減半、不再算錯，還被經理稱讚報告又快又好懂[③]。</p>
+                        </div>
+
+                        <div class="level-item lv-b1 p-4 bg-gradient-to-r from-emerald-50 to-green-50/70 rounded-xl border-l-8 border-emerald-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b1">B1（例1：新增「結論摘要與圖表頁」提升會議效率）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「最近私が仕事で工夫したことは、上司へ提出する月次報告書の構成です。以前は、エクセルの細かい数字の表をそのまま提出していたため、会議中に『どこが重要なのか分かりにくい』という課題がありました [要點①]。<br>
+                                    そこで私は、報告書の1ページ目に結論のまとめと、売上の変化が分かるグラフを載せるように工夫しました。また、特に注意すべき数字には赤い色をつけました [要點②]。<br>
+                                    その結果、会議での説明時間がとても短くなり、上司からも『ポイントがすぐに理解できて助かる』と高い評価をいただきました [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近在工作上下功夫的是提交給主管的月報架構。以前直接交Excel細部數字表，開會時有「看不出哪裡重要」的問題[①]。於是我下功夫在第一頁放上結論摘要與呈現營收變化的圖表，並將需注意的數字標紅[②]。結果會議說明時間大幅縮短，獲得主管高度評價[③]。</p>
+                            </div>
+                            <div class="border-t border-emerald-200 pt-3">
+                                <span class="level-badge badge-b1">B1（例2：建立「報告提交前雙重檢查表」消除數字錯誤）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「最近改善したことは、報告書を提出する前のチェック方法です。以前は、月末の忙しい時期に急いでデータを整理するため、数字の入力ミスや単位の間違いが時々起こるという問題がありました [要點①]。<br>
+                                    そこで私は、よく起こるミスをまとめた『チェックリスト』を作成し、提出前に必ず事務チームの同僚と2人で確認し合うルールを作りました [要點②]。<br>
+                                    その結果、ここ3ヶ月間は報告書のミスがゼロになり、上司や他部署からの信頼を大きく高めることができました [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近改善的是交報告前的檢查方法。以前月底忙時趕著整理資料，偶爾會發生數字輸入或單位錯誤[①]。於是我製作統整常見錯誤的「檢查表」，建立提交前必定與行政同事兩人互相確認的規則[②]。結果這三個月報告零失誤，大幅提升了主管與他部門的信賴[③]。</p>
+                            </div>
+                        </div>
+
+                        <div class="level-item lv-b1-high p-4 bg-gradient-to-r from-amber-50 to-orange-50/70 rounded-xl border-l-8 border-amber-500 shadow-sm">
+                            <span class="level-badge badge-b1-high">B1 High</span>
+                            <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                「最近私が工夫したのは、全社向けのプロジェクト進捗報告書のデザイン改善です。以前は文字と数字ばかりで、読む人の立場から見て、どの部署が遅れているのか一目で把握しづらいという課題がありました [要點①]。<br>
+                                そこで、チームメンバーと議論やレビューを重ね、信号機のように『順調なら青、注意なら黄色、遅れなら赤』と色分けしたダッシュボード形式に改善しました [要點②]。<br>
+                                その結果、誰が見ても一目で課題が分かる使いやすい資料になり、経営陣がすぐ対策を議論できるようになったと大変好評を得ています [要點③]。以上です。」
+                            </p>
+                            <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近下功夫的是全公司專案進度報告的設計改善。以前全是文字與數字，站在閱讀者立場難以一眼掌握哪個部門落後[①]。於是與團隊反覆討論審查，改善為像紅綠燈一樣依「順利藍、注意黃、落後紅」分色的儀表板形式[②]。結果變成誰看都能一目了然的好用資料，讓經營層能立刻討論對策，大受好評[③]。</p>
+                        </div>
+
+                        <div class="level-item lv-b2 p-4 bg-gradient-to-r from-rose-50 to-pink-50/70 rounded-xl border-l-8 border-rose-500 shadow-sm space-y-3">
+                            <div>
+                                <span class="level-badge badge-b2">B2（例1：導入雲端自動化彙整，解決跨部門報告延遲與重工問題）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「最近私が主導して改善したのは、全社の週次データ集計およびレポーティングのプロセスの標準化です。従来は、各部署からメールで個別にエクセルファイルが送られてくるため、データの転記作業に膨大な時間を要し、入力ミスや提出の遅れが頻発するという課題がありました [要點①]。<br>
+                                    この問題を解決するため、私はクラウド上の共有スプレッドシートと自動集計関数を組み合わせた新フォーマットを構築しました。また、現場の担当者が迷わず入力できるよう、入力規則を設けて事前説明会を実施いたしました [要點②]。<br>
+                                    その結果、報告書作成にかかる工数を従来の約60%削減することに成功し、浮いた時間をデータの背景分析や改善提案に充てることができるようになり、経営会議の質の向上に大きく貢献できました [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近我主導改善的是全公司每週數據彙整與報告流程的標準化。過去各部門分別用郵件寄送Excel檔，不僅謄寫數據耗費龐大時間，輸入錯誤與遲交也頻傳[①]。為解決此問題，我建立結合雲端共用試算表與自動彙整函數的新格式，並設定輸入驗證規則、舉辦事前說明會[②]。結果成功減少約60%製作報告的工時，能將省下的時間用於分析數據背景與提出改善建議，對提升經營會議品質做出重大貢獻[③]。</p>
+                            </div>
+                            <div class="border-t border-rose-200 pt-3">
+                                <span class="level-badge badge-b2">B2（例2：整合分散報告並廢除形式化會議資料）</span>
+                                <p class="jp-text mt-1.5 text-slate-800 font-medium leading-relaxed">
+                                    「最近取り組んだ改善は、社内における重複した報告業務の統廃合です。以前は、似通った売上データの報告書を複数の会議体に向けて別々のフォーマットで作成しており、事務部門の業務を圧迫しているという構造的な課題がありました [要點①]。<br>
+                                    そこで私は、各会議の目的と必要な指標（KPI）を精査し、すべてのニーズを網羅した一元的なマスターレポートを設計しました。さらに、関係部署の上長と交渉し、形骸化していた一部の定例レポートの廃止を実現しました [要點②]。<br>
+                                    その結果、月間で約20時間の残業削減を達成しただけでなく、社内で参照する数字の基準が統一され、迅速かつ的確な経営判断の促進につながりました [要點③]。以上です。」
+                                </p>
+                                <p class="text-xs text-slate-600 mt-1">💡 翻譯：最近著手改善的是公司內部重複報告業務的整併。以前針對多個會議分別用不同格式製作相似的營收數據報告，造成壓迫行政部門業務的結構性問題[①]。於是我仔細檢視各會議目的與所需KPI，設計出涵蓋所有需求的單一主報告，並與相關部門主管協商，廢除部分流於形式的例行報告[②]。結果不僅每月減少約20小時加班，更統一了公司內部參照的數字基準，促成迅速且精準的經營決策[③]。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        function filterLevel(levelClass, btnElement) {
+            // Update active button state
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Show/hide level items
+            const items = document.querySelectorAll('.level-item');
+            items.forEach(item => {
+                if (levelClass === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(levelClass)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
